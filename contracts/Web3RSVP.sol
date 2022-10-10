@@ -1,5 +1,5 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
 
 contract Web3RSVP {
 
@@ -76,7 +76,6 @@ contract Web3RSVP {
       eventDataCID
     );
   }
-
 
   function createNewRSVP(bytes32 eventId) external payable {
     CreateEvent storage myEvent = idToEvent[eventId];
@@ -155,7 +154,6 @@ contract Web3RSVP {
 
     emit ConfirmedAttendee(eventId, attendee);
   }
-
 
   function withdrawUnclaimedDeposits(bytes32 eventId) external {
     CreateEvent memory myEvent = idToEvent[eventId];
